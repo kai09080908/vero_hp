@@ -1,0 +1,340 @@
+@charset "UTF-8";
+/* CSS Document */
+
+/* 共通CSS */
+
+body {
+	background-color: black;
+	color:white;
+}
+.main:before{
+  content:"";
+  display:block;
+  position:fixed;
+  top:0;
+  left:0;
+  z-index:-1;
+  width:100%;
+  height:100vh;
+  background:url(images/mv.png) center no-repeat;
+  background-size:cover;
+}
+.contents{
+	width: 100%;
+}
+header{
+	clear:both;
+	width: 100%;
+	height: 140px;
+	padding: 30px;
+	position: fixed;
+	top: 0;
+	z-index: 10;
+	background-image: url("images/header.png");
+	background-repeat: no-repeat;
+}
+.logo img{
+	width: 115px;
+}
+.logo {
+	float: left;
+}
+/*ハンバーガー実験---ここから-------*/
+.menu-icon{
+	display: none;
+	float: right;
+	width: 100px;
+}
+#drawer-checkbox {
+  display: none;
+}
+#drawer-icon {
+  cursor: pointer;
+  display: inline-block;
+  height: 50px;
+  position: relative;
+  width: 50px;
+}
+#drawer-icon span {
+  background:  white;
+  border-radius: 1px;
+  display: block;
+  height: 10%;
+  left: 50%;
+  margin: -8% 0 0 -42%;
+  position: absolute;
+  top: 50%;
+  transition: all 0.3s ease-in-out;
+  width: 84%;
+}
+#drawer-icon span::before,
+#drawer-icon span::after {
+  -webkit-transform: rotate(0);
+  background: white;
+  border-radius: 1px;
+  content: "";
+  display: block;
+  height: 100%;
+  left: 50%;
+  margin: -8% 0 0 -50%;
+  position: absolute;
+  top: 50%;
+  transform: rotate(0);
+  transition: all 0.3s ease-in-out;
+  width: 100%;
+}
+#drawer-icon span::before {
+  margin-top: -40%;
+}
+#drawer-icon span::after {
+  margin-top: 26%;
+}
+#drawer-checkbox:checked ~ #drawer-icon span {
+  background: rgba(51, 51, 51, 0);
+}
+#drawer-checkbox:checked ~ #drawer-icon span::before,
+#drawer-checkbox:checked ~ #drawer-icon span::after {
+  content: "";
+  display: block;
+  height: 100%;
+  left: 50%;
+  margin: -8% 0 0 -42%;
+  position: absolute;
+  top: 50%;
+  width: 100%;
+}
+#drawer-checkbox:checked ~ #drawer-icon span::before {
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+}
+#drawer-checkbox:checked ~ #drawer-icon span::after {
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+}
+#drawer-content {
+  overflow: auto;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 40;
+  width: 250px;
+  max-width: 90%;
+  height: 100%;
+  background : #000000;
+  transition: all 0.3s ease-in-out 0s;
+  transform: translateX(-100%);
+}
+#drawer-checkbox:checked ~ #drawer-content {
+  transform: translateX(0);
+  box-shadow: 6px 0 25px rgba(0, 0, 0, 0.16);
+}
+
+#drawer-close {
+  display: none;
+  position: fixed;
+  z-index: 39;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #000;
+  opacity: 0;
+  transition: all 0.3s ease-in-out 0s;
+}
+#drawer-checkbox:checked ~ #drawer-close {
+  display: block;
+  opacity: 0.3;
+}
+.menu-sp {
+	margin: 150px auto;
+}
+.menu-sp ul li{
+	list-style: none;
+}
+.menu-sp ul li a{
+	display: block;
+	width: 167px;
+	margin: 0 auto;
+	text-align: right;
+	color: white;
+	height: 55px;
+	font-family: "Hiragino Sans", "Hiragino Kaku Gothic ProN", Meiryo, "sans-serif";
+	font-weight: 500;
+	letter-spacing: 3px;
+}
+
+/*ハンバーガー実験---END-------*/
+
+
+.menu-nolink{
+	color: #2C8FD8;
+}
+.menu{
+	float:right;
+	margin: 0 40px;
+}
+.menu ul li{
+	list-style: none;
+	float: left;
+}
+
+.menu ul li{
+	display: block;
+	width: 167px;
+	height: 45px;
+	text-align: center;
+	line-height: 40px;
+	color: white;
+	font-family: "Hiragino Sans", "Hiragino Kaku Gothic ProN", Meiryo, "sans-serif";
+	text-decoration:none;
+	font-weight: 200;
+	letter-spacing: 3px;
+}
+.menu ul li a{
+	display: block;
+	width: 167px;
+	height: 45px;
+	text-align: center;
+	line-height: 40px;
+	color: white;
+	font-family: "Hiragino Sans", "Hiragino Kaku Gothic ProN", Meiryo, "sans-serif";
+	text-decoration:none;
+	font-weight: 200;
+	letter-spacing: 3px;
+}
+.menu ul li a:hover{
+	color: #2C8FD8;
+}
+.mv{
+	padding-top: 200px;
+	margin-bottom: 100px;
+	text-align: center;
+}
+.mv p{
+	font-family: 'Roboto Condensed', sans-serif;
+	letter-spacing: 13px;
+	transform: scale(0.9, 1);
+}
+.mv img{
+	width: 215px;
+	margin-bottom: 70px;
+}
+.lead h1{
+	margin-left: 60px;	
+	font-size: 95pt;
+	font-family: "Hiragino Sans", "Hiragino Kaku Gothic ProN", Meiryo, "sans-serif";
+	font-weight: 700;
+}
+
+.lead-02{
+	width: 747px;
+	font-size: 20px;
+	line-height: 32px;
+	margin: 30px 0 0 60px;
+	font-family: "Hiragino Sans", "Hiragino Kaku Gothic ProN", Meiryo, "sans-serif";
+	font-weight: 100;
+}
+.gallery{
+	margin: 125px 0 0 41px;
+}
+.gallery img{
+	width: 261px;
+	margin: 19px;
+}
+.contents-main{
+	background-color: black;
+}
+.gd{
+	height: 280px;
+}
+.gd img{
+	width: 100%;
+	height: 280px;
+}
+.concept{
+	width: 780px;
+	margin: 140px auto 0;
+}
+.concept h2{
+	font-size: 52px;
+	font-family: "Hiragino Sans", "Hiragino Kaku Gothic ProN", Meiryo, "sans-serif";
+	font-weight: 600;
+	margin-bottom: 35px;
+}
+.concept p{
+	font-family: "Hiragino Sans", "Hiragino Kaku Gothic ProN", Meiryo, "sans-serif";
+	font-size: 19px;
+	font-weight: 100;
+	line-height: 32px;
+	margin-bottom: 35px;
+}
+
+.concept a{
+	color: white;
+	font-family: "Hiragino Sans", "Hiragino Kaku Gothic ProN", Meiryo, "sans-serif";
+	font-weight: 100;
+	font-size: 20px;
+}
+.concept a:hover{
+	color: #2C8FD8;
+} 
+.gallery-image{
+	margin: 0 0 0 auto;
+	width: 850px;
+	padding-top: 100px; 
+	padding-bottom: 100px; 	
+}
+.gallery-image img{
+	width: 850px;
+	margin: 0 auto;
+}
+footer{
+	background-color: #2C2C2C;
+	height: 300px;
+	padding-top: 65px;
+}
+.menu-footer{
+	margin: 0 auto;	
+}
+.menu-footer ul{
+	width: 560px;
+	height: 45px;
+	margin: 0 auto;
+}
+.menu-footer ul li{
+	list-style: none;
+	float: left;
+}
+.menu-footer ul li a{
+	display: block;
+	width: 140px;
+	height: 45px;
+	line-height: 40px;
+	text-align: center;
+	color: white;
+	text-decoration:none;
+	font-family: "Hiragino Sans", "Hiragino Kaku Gothic ProN", Meiryo, "sans-serif";
+	font-weight: 200;
+	letter-spacing: 3px;
+	font-size: 13px;
+}
+.menu-footer ul li a:hover{
+	color: #2C8FD8;
+}
+.footer-logo{	
+	margin-top: 70px;
+	clear: both;
+}
+.footer-logo img{
+	display: block;
+	width: 115px;
+	margin: 0 auto;
+}
+footer p{
+	text-align: center;
+	font-family: "Hiragino Sans", "Hiragino Kaku Gothic ProN", Meiryo, "sans-serif";
+	font-size: 10px;
+	font-weight: 100;
+	margin-top: 100px;
+	letter-spacing: 3px;
+}
