@@ -1,0 +1,131 @@
+/* Scss Document */
+
+@mixin h2{
+	font-size: 45px;
+	font-weight: 600;
+	line-height: 70px;
+}
+
+@mixin p{
+	font-weight: 100;
+}
+
+.about{
+	.about-img{
+	width: 300px;
+	height: 120px;
+	margin: 250px auto 0;
+		img{
+			width: 250px;
+			margin: 0 25px;
+		}
+	}
+	p{
+		font-family: "Hiragino Sans", "Hiragino Kaku Gothic ProN", Meiryo, "sans-serif";
+		font-weight: 200;
+		font-size: 13px;
+		text-align: center;
+		margin-bottom: 65px;
+		padding-bottom: 100;
+		color: #BBCCDB;
+	}
+	.scroll{
+		width: 25px;
+		margin: 0 auto;
+		margin-bottom: 150px;
+		img{
+			width: 25px;
+		}
+	}
+}
+.about-contents{
+	margin: 0 60px;
+	background-image: url("images/profile.png");
+	background-size: cover;
+	background-repeat: no-repeat;
+	height: 400px;
+	position: relative;
+	img{
+		width: 580px;
+		position: absolute;
+		top: 0;
+		right: 0;
+		bottom: 0;
+		left: 0;
+		margin: auto 60px;
+	}
+}
+.about-section01{
+	font-family: "Hiragino Sans", "Hiragino Kaku Gothic ProN", Meiryo, "sans-serif";
+	background-image: url("images/section01.png");
+	background-size: cover;
+	background-repeat: no-repeat;
+	height: 560px;
+	position: relative;
+	.sec01{
+		position: absolute;
+		margin: 150px 60px;
+		top: 0;
+		right: 0;
+		bottom: 0;
+		left: 0;
+		h2{
+			@include h2;
+		}
+		h3{
+			font-size: 30px;
+			font-weight: 200;
+			font-style: italic;
+			letter-spacing: 3px;
+		}
+		p{
+			@include p;
+		}
+	}
+}
+
+.about-section02{
+	clear:both;
+	margin: 50px 60px;
+	font-family: "Hiragino Sans", "Hiragino Kaku Gothic ProN", Meiryo, "sans-serif";
+	.sec02{
+		margin: auto 0;
+		float: right;
+		width: 50%;
+		padding: 0 30px;
+		h2{
+			@include h2;
+		}
+		p{
+			@include p;
+		}
+	}
+	img{
+		width: 50%;
+	}
+}
+
+.about-section03{
+	width: 100%;
+	margin: 0 60px;
+	font-family: "Hiragino Sans", "Hiragino Kaku Gothic ProN", Meiryo, "sans-serif";
+	.sec03{
+		margin: auto 60px;
+		width: 100%;
+		h2{
+			@include h2;
+		}
+		p{
+			@include p;
+		}
+	}
+	.sec03-img{
+		clear: both;
+		img{
+			width: 500px;
+			margin-left: 60px;
+			float: right;
+		}	
+	}
+	
+}
