@@ -1,0 +1,32 @@
+/* Scss Document */
+.art .art-img {
+  width: 150px;
+  height: 120px;
+  margin: 250px auto 0; }
+  .art .art-img img {
+    width: 150px;
+    margin: 0 auto; }
+.art p {
+  font-family: "Hiragino Sans", "Hiragino Kaku Gothic ProN", Meiryo, "sans-serif";
+  font-weight: 200;
+  font-size: 13px;
+  text-align: center;
+  margin-bottom: 65px;
+  padding-bottom: 100;
+  color: #BBCCDB; }
+.art .scroll {
+  width: 25px;
+  margin: 0 auto;
+  margin-bottom: 150px; }
+  .art .scroll img {
+    width: 25px; }
+
+.art-image {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 0 100px 0;
+  align-items: flex-start; }
+  .art-image img {
+    flex: auto;
+    width: 90%;
+    margin: 10px 5%; }
