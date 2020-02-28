@@ -1,0 +1,114 @@
+@charset "UTF-8";
+/* CSS Document */
+
+
+
+/* タブレット用CSS */
+@media (max-width: 1000px) {
+
+	.menu {
+		display:none;
+	}
+	.menu-icon {
+		display:block;
+	}
+	.gd{
+		height: 150px;
+	}
+	.gd img{
+		height: 150px;
+	}
+	.lead h1{
+		margin-left: 30px;
+		font-size: 80px;
+	}
+	.lead-02{
+		width: 100%;
+		margin: 30px 0 0 0;
+	}
+	.lead-02 p{
+		padding: 0 30px;
+		font-size: 17px;
+	}
+	.gallery{
+		margin-top: 50px;
+	}
+	.concept{
+		width: 100%;
+	}
+	.gallery-image{
+		width: 100%
+	}
+	.gallery-image img{
+		width: 100%;
+	}
+}
+
+/* スマホ用CSS*/
+
+@media (max-width: 670px) {
+
+	.menu {
+		display:none;
+	}
+	.menu-icon {
+		display:block;
+	}
+	.mv p{
+		font-size: 10px;
+		letter-spacing: 6px;
+	}
+	.lead h1{
+		font-size: 50px;
+		margin-left: 30px;
+	}
+	.lead-02{
+		font-size: 15px;
+		width: 100%;
+	}
+	.mv{
+		margin-bottom: 10px;
+	}
+	.gd{
+		height: 150px;
+	}
+	.gd img{
+		height: 150px;
+	}
+	.gallery img{
+		width: 80%;
+	}
+	.concept h2 {
+		font-size: 30px;
+		padding: 0 15px;
+	}
+	.concept p{
+		padding: 0 15px;
+		font-size: 17px;
+	}
+	.concept a{
+		margin: 0 15px;
+	}
+	.gallery-image{
+		padding-bottom: 50px;
+	}
+
+	.gallery-image img{
+		width: 100%;
+	}
+	.menu-footer{
+		display: none;
+	}
+	.footer-logo{
+		margin-top: 5px;
+	}
+	footer{
+		height: 140px;
+		padding-top: 45px;
+	}
+	footer p {
+		margin-top: 35px;
+		font-size: 5px;
+	}
+}
+
